@@ -1,13 +1,15 @@
-import { Bell, Menu, Search, ShoppingCart, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { navLinks } from "./links";
+import NavIcons from "./navIcons";
+import SearchBar from "./searchBar";
 
 const Header = () => {
   return (
-    <header className="container mx-auto flex w-full items-center justify-between px-6 py-7 lg:px-12">
-      <div>
+    <header className="container mx-auto flex w-full items-center justify-between gap-x-6 px-6 py-7 lg:px-12">
+      <Link href="/">
         <Image
           src="/logo.svg"
           alt="logo Furniro"
@@ -15,9 +17,9 @@ const Header = () => {
           height={41}
           quality={100}
         />
-      </div>
+      </Link>
 
-      <nav className="hidden gap-x-14 lg:flex">
+      <nav className="hidden gap-x-14 lg:flex lg:gap-x-6">
         {navLinks.map((link) => (
           <Link
             key={link.label}
@@ -29,12 +31,9 @@ const Header = () => {
         ))}
       </nav>
 
-      <nav className="hidden gap-x-8 lg:flex">
-        <User className="cursor-pointer transition-colors hover:text-primary" />
-        <Search className="cursor-pointer transition-colors hover:text-primary" />
-        <Bell className="cursor-pointer transition-colors hover:text-primary" />
-        <ShoppingCart className="cursor-pointer transition-colors hover:text-primary" />
-      </nav>
+      <SearchBar />
+
+      <NavIcons />
 
       <Sheet>
         <SheetTrigger className="flex lg:hidden" asChild>
@@ -53,6 +52,18 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
+          <Link
+            href=""
+            className="w-1/2 justify-center text-lg font-medium transition-colors hover:text-primary"
+          >
+            Login
+          </Link>
+          <Link
+            href=""
+            className="w-1/2 justify-center text-lg font-medium transition-colors hover:text-primary"
+          >
+            Cart(1)
+          </Link>
         </SheetContent>
       </Sheet>
     </header>
