@@ -16,6 +16,7 @@ const Header = () => {
           width={185}
           height={41}
           quality={100}
+          priority
         />
       </Link>
 
