@@ -1,11 +1,13 @@
-import { Bell, ShoppingCart, User } from "lucide-react";
+import { Bell } from "lucide-react";
+import Cart from "./cart";
+import UserMenu from "./userMenu";
 
 const NavIcons = () => {
   return (
-    <nav className="hidden gap-x-8 lg:flex">
-      <User className="size-6 cursor-pointer transition-colors hover:text-primary" />
+    <nav className="hidden items-center gap-x-8 lg:flex">
+      <UserMenu />
       <Bell className="size-6 cursor-pointer transition-colors hover:text-primary" />
-      <ShoppingCart className="size-6 cursor-pointer transition-colors hover:text-primary" />
+      <Cart />
     </nav>
   );
 };
