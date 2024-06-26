@@ -53,8 +53,8 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         fontColor: {
-          primary: "hsl(var(--font-color-primary))",
-          secondary: "hsl(var(--font-color-secondary))",
+          primary: "hsl(var(--text-1))",
+          secondary: "hsl(var(--text-2))",
         },
       },
       borderRadius: {
