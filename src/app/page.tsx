@@ -18,7 +18,7 @@ export default function Home() {
         <div className="hidden w-1/2 md:flex"></div>
         <div className="flex flex-col justify-center rounded-md bg-muted-foreground p-6 shadow-sm md:w-1/2 md:px-12 md:pb-6 md:pt-12">
           <p className="mb-4 font-semibold md:mb-6">New Arrival</p>
-          <h1 className="mb-4 text-2xl font-bold text-primary md:mb-6 md:text-3xl lg:text-5xl">
+          <h1 className="mb-4 text-2xl font-bold text-primary md:mb-6 md:text-3xl lg:text-4xl xl:text-5xl">
             Discover Our <br /> New Collection
           </h1>
           <p className="mb-12 text-balance font-medium lg:text-lg">
