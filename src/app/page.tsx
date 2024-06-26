@@ -1,4 +1,5 @@
-import ProductList from "@/components/productList/productList";
+import ProductList from "@/components/categoryList/categoryList";
+import ProductCard from "@/components/productList";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -17,7 +18,7 @@ export default function Home() {
         />
 
         <div className="container mx-auto flex h-full w-full items-center px-6 lg:px-12">
-          <div className="hidden w-1/2 md:flex"></div>
+          <div className="hidden w-1/2 md:flex" />
           <div className="flex flex-col justify-center rounded-md bg-muted-foreground p-6 shadow-sm md:w-1/2 md:px-12 md:pb-6 md:pt-12">
             <p className="mb-4 font-semibold text-fontColor-primary md:mb-6">
               New Arrival
@@ -49,6 +50,16 @@ export default function Home() {
 
         <div className="mt-10 w-full">
           <ProductList />
+        </div>
+      </section>
+
+      <section className="container mx-auto flex w-full flex-col items-center justify-center px-6 py-16 lg:px-12">
+        <h2 className="text-4xl font-bold text-fontColor-primary">
+          Our Products
+        </h2>
+
+        <div className="mt-10 w-full">
+          <ProductCard />
         </div>
       </section>
     </>
