@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import { helpLinks, navLinks } from "./header/links";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { helpLinks, navLinks } from "../header/links";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import FooterLinks from "./footerLinks";
 
 const Footer = () => {
   return (
@@ -22,37 +22,8 @@ const Footer = () => {
       </div>
 
       <div className="mt-6 flex h-full justify-between md:w-1/3 md:justify-around">
-        <div className="flex flex-col gap-y-10">
-          <p className="font-medium text-[#9F9F9F]">Links</p>
-
-          <ul className="flex flex-col gap-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-medium transition-colors hover:text-primary md:justify-center"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col gap-y-10">
-          <p className="font-medium text-[#9F9F9F]">Help</p>
-
-          <ul className="flex flex-col gap-y-3">
-            {helpLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-medium transition-colors hover:text-primary md:justify-center"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </ul>
-        </div>
+        <FooterLinks title="Links" linkToMap={navLinks} />
+        <FooterLinks title="Help" linkToMap={helpLinks} />
       </div>
 
       <div className="mt-6 flex h-full flex-col gap-y-6 md:w-1/3">
