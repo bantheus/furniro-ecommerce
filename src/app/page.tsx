@@ -2,6 +2,7 @@ import ProductList from "@/components/categoryList/categoryList";
 import ProductCard from "@/components/productList";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -58,8 +59,15 @@ export default function Home() {
           Our Products
         </h2>
 
-        <div className="mt-10 w-full">
+        <div className="mt-10 flex w-full flex-col items-center">
           <ProductCard />
+          <Button
+            className="mt-12 rounded-none border-primary text-primary transition-colors duration-300 hover:bg-primary hover:text-white"
+            variant="outline"
+            size="lg"
+          >
+            <Link href="/products">Show More</Link>
+          </Button>
         </div>
       </section>
     </>
