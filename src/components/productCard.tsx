@@ -32,6 +32,7 @@ const ProductCard = ({
         width={285}
         height={301}
         quality={100}
+        priority
         className="w-full object-cover duration-300"
       />
 

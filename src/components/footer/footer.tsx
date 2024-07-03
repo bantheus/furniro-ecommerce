@@ -9,13 +9,15 @@ const Footer = () => {
     <>
       <footer className="container mx-auto flex w-full flex-col justify-between gap-x-6 border-t-2 px-6 py-7 md:h-[400px] md:flex-row lg:px-12">
         <div className="mt-6 flex h-full flex-col gap-y-10 md:w-1/3">
-          <Image
-            src="/logo_2.svg"
-            alt="logo Furniro"
-            width={85}
-            height={36}
-            className="object-contain"
-          />
+          <div>
+            <Image
+              src="/logo_2.svg"
+              alt="logo Furniro"
+              width={95}
+              height={46}
+              className="h-auto w-auto object-contain"
+            />
+          </div>
 
           <p className="text-[#9F9F9F]">
             400 University Drive Suite 200 Coral Gables, <br /> FL 33134 USA
