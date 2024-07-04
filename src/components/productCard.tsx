@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Label from "./label";
 import { Button } from "./ui/button";
 
 interface ProductCardProps {
@@ -64,17 +65,9 @@ const ProductCard = ({
         </div>
       </div>
 
-      {newProduct && (
-        <div className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-emerald-500 text-xs text-white">
-          New
-        </div>
-      )}
+      {newProduct && <Label children="New" />}
 
-      {discountPercentage && (
-        <div className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-rose-500 text-xs text-white">
-          {discountPercentage}
-        </div>
-      )}
+      {discountPercentage && <Label children={discountPercentage} />}
     </Link>
   );
 };
